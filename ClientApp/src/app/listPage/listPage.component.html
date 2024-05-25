@@ -1,0 +1,28 @@
+<h1>listPage</h1>
+
+<div *ngIf="cars.length > 0">
+  <button id="setcolorchromabtn" (click)="setAllColorsToChroma()">Set All Colors to Red</button>
+  <p *ngIf="allColorsSet">Colors updated to red.</p>
+  <p *ngIf="carsFilteredByBrand">Filtering by brand complete.</p>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Model</th>
+      <th><button id="togglebrandbtn" (click)="toggleSortByBrand()">Brand</button></th>
+      <th>Color</th>
+      <th>Fuel Type</th>
+      <th>Release Year</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let car of cars">
+      <td>{{ car.model }}</td>
+      <td>{{ car.brand }}</td>
+      <td>{{ car.color }}</td>
+      <td>{{ car.fuelType }}</td>
+      <td>{{ car.releaseYear }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
