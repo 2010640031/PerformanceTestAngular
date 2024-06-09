@@ -18,7 +18,7 @@ export class CarService {
 
   constructor() {}
 
-  getAll(count: number = 10000): Car[] {
+  getCars(count: number = 10000): Car[] {
     const cars = [];
     for (let i = 0; i < count; i++) {
       let brand = this.brands[Math.floor(Math.random() * this.brands.length)];

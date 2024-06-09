@@ -1,0 +1,33 @@
+<h1>listPage10000</h1>
+<button id="getmorecars100btn" (click)="GetMoreCars(100)">Get 100 more Cars</button>
+<button id="getmorecars1000btn" (click)="GetMoreCars(1000)">Get 1000 more Cars</button>
+<button id="getmorecars10000btn" (click)="GetMoreCars(10000)">Get 10000 more Cars</button>
+
+<button id="deletealladdedcarsbtn" (click)="DeleteAddedCarsWith()">Delete All Added Cars</button>
+<div *ngIf="cars.length > 0">
+  <div id="donediv">Loading-Done</div>
+  <button id="setcolorredbtn" (click)="setAllColorsToRed()">Set All Colors to Red</button>
+  <p *ngIf="allColorsSet">Colors updated to red.</p>
+  <p *ngIf="carsFilteredByBrand">Filtering by brand complete.</p>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Model</th>
+      <th><button id="togglebrandbtn" (click)="toggleSortByBrand()">Brand</button></th>
+      <th>Color</th>
+      <th>Fuel Type</th>
+      <th>Release Year</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let car of cars">
+      <td>{{ car.model }}</td>
+      <td>{{ car.brand }}</td>
+      <td>{{ car.color }}</td>
+      <td>{{ car.fuelType }}</td>
+      <td>{{ car.releaseYear }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

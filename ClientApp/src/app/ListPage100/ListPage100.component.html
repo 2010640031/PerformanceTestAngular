@@ -1,7 +1,12 @@
-<h1>listPage</h1>
+<h1>listPage100</h1>
+<button id="getmorecars100btn" (click)="GetMoreCars(100)">Get 100 more Cars</button>
+<button id="getmorecars1000btn" (click)="GetMoreCars(1000)">Get 1000 more Cars</button>
+<button id="getmorecars10000btn" (click)="GetMoreCars(10000)">Get 10000 more Cars</button>
 
+<button id="deletealladdedcarsbtn" (click)="DeleteAddedCarsWith()">Delete All Added Cars</button>
 <div *ngIf="cars.length > 0">
-  <button id="setcolorchromabtn" (click)="setAllColorsToChroma()">Set All Colors to Red</button>
+  <div id="donediv">Loading-Done</div>
+  <button id="setcolorredbtn" (click)="setAllColorsToRed()">Set All Colors to Red</button>
   <p *ngIf="allColorsSet">Colors updated to red.</p>
   <p *ngIf="carsFilteredByBrand">Filtering by brand complete.</p>
 
